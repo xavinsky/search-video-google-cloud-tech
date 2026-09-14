@@ -57,3 +57,7 @@ docs/index.html        page générée — ne jamais éditer à la main
 ## Comment ça marche
 
 Le listing lit la page HTML de la playlist (`ytInitialData`) puis appelle l'API de continuation `youtubei/v1/browse` que le site utilise lui-même pour le défilement infini. Les métadonnées sont dans les blocs `lockupViewModel` (identifiant, titre, durée en badge, vues arrondies, date relative). La page d'une vidéo expose `publishDate`, `lengthSeconds` et `viewCount` exacts. Ces structures sont celles du site YouTube et peuvent changer sans préavis : si le listing renvoie 0 vidéo, c'est l'extraction de `scripts/youtube.py` qui est à adapter.
+
+## Licence
+
+[MIT](LICENSE).
