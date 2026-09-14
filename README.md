@@ -1,8 +1,10 @@
 # search-video-google-cloud-tech
 
+**➜ Page en ligne : [xavinsky.github.io/search-video-google-cloud-tech](https://xavinsky.github.io/search-video-google-cloud-tech/)**
+
 Page de recherche dans les vidéos de la chaîne YouTube [Google Cloud Tech](https://www.youtube.com/@googlecloudtech), taguées automatiquement par technologie (BigQuery, Dataflow, GKE, Vertex AI, ADK...) et regroupées par famille (Data & Analytics, Bases de données, IA & Machine Learning, Compute...).
 
-**Page :** https://xavinsky.github.io/search-video-google-cloud-tech/ — filtrage par famille, par tag (cumulables), par chaîne, par plage de dates, par mot du titre ; tri par titre, durée, vues ou date. Un seul fichier HTML autonome, qui fonctionne aussi hors ligne une fois généré dans `docs/index.html`.
+Filtrage par famille, par tag (cumulables), par chaîne, par plage de dates, par mot du titre ; tri par titre, durée, vues ou date. Un seul fichier HTML autonome, qui fonctionne aussi hors ligne une fois généré dans `docs/index.html`.
 
 ## Publication automatique
 
