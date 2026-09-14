@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vidéos Google Cloud Tech — recherche par technologie</title>
+<style>
+  :root {
+    --bg: #fafafa; --fg: #1a1a1a; --muted: #666; --card: #ffffff; --border: #e2e2e2;
+    --accent: #1a73e8;
+    --age-fresh: #1e8e3e; --age-ok: #666; --age-aging: #b06000; --age-old: #a03030;
+    --tooltip-bg: #202124; --tooltip-fg: #f1f1f1; --head-bg: #f0f0f0;
+    --chip-bg: #eef1f5; --chip-fg: #333; --chip-active-bg: #1a73e8; --chip-active-fg: #fff;
+    --chip-tag-bg: #d6e6fb; --chip-tag-fg: #0b4a91; --chip-tag-active-bg: #1a73e8;
+    --chip-group-bg: #b7e8c7; --chip-group-fg: #0d4a2a; --chip-group-active-bg: #1e8e4f; --chip-group-active-fg: #fff;
+    --chip-channel-bg: #f3e2c9; --chip-channel-fg: #6b3d00; --chip-channel-active-bg: #b06000;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212; --fg: #e8e8e8; --muted: #999; --card: #1c1c1c; --border: #333;
+      --accent: #8ab4f8;
+      --age-fresh: #6fd18a; --age-ok: #aaa; --age-aging: #e0a94a; --age-old: #e58585;
+      --tooltip-bg: #f1f1f1; --tooltip-fg: #202124; --head-bg: #262626;
+      --chip-bg: #2a2a2a; --chip-fg: #ddd; --chip-active-bg: #8ab4f8; --chip-active-fg: #121212;
+      --chip-tag-bg: #1c3a5e; --chip-tag-fg: #a9c9f5; --chip-tag-active-bg: #8ab4f8;
+      --chip-group-bg: #2f5a40; --chip-group-fg: #c9f5da; --chip-group-active-bg: #4fd88a; --chip-group-active-fg: #0a2e1c;
+      --chip-channel-bg: #4a3319; --chip-channel-fg: #f0d0a0; --chip-channel-active-bg: #e0a94a;
+    }
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--fg);
+    max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 4rem; line-height: 1.5;
+  }
+  h1 { font-size: 1.3rem; margin-bottom: 0.2rem; }
+  .subtitle { font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; }
+  .subtitle a { color: var(--accent); text-decoration: none; }
+  .subtitle a:hover { text-decoration: underline; }
+  h3.filter-label {
+    font-size: 0.8rem; font-weight: 700; color: var(--fg);
+    margin: 0.5rem 0 0.2rem; display: flex; align-items: center; gap: 0.5rem;
+  }
+  h3.filter-label.section-title {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted);
+    margin-top: 0.9rem; border-top: 1px solid var(--border); padding-top: 0.5rem;
+  }
+  .count-badge {
+    text-transform: none; letter-spacing: normal; font-weight: 700; color: var(--accent);
+    background: var(--chip-bg); border-radius: 999px; padding: 0.05rem 0.5rem; font-size: 0.72rem;
+  }
+  .section-title-details { margin-top: 0.15rem; }
+  .section-title-details summary.section-title {
+    cursor: pointer; list-style: none;
+    display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+  }
+  .section-title-details summary.section-title .section-title-text { flex: 1; }
+  .section-title-details summary.section-title .section-title-text::before {
+    content: '▸ '; display: inline-block; transition: transform 0.15s;
+  }
+  .section-title-details[open] summary.section-title .section-title-text::before { transform: rotate(90deg); }
+  .section-title-details summary.section-title input#tagSearch {
+    text-transform: none; letter-spacing: normal; font-weight: 400; font-size: 0.8rem;
+    width: 200px; max-width: 45%; box-sizing: border-box;
+    padding: 0.25rem 0.6rem; background: var(--card); color: var(--fg);
+    border: 1px solid var(--border); border-radius: 6px; cursor: text;
+  }
+  .section-title-details summary.section-title input#tagSearch:focus { outline: none; border-color: var(--accent); }
+  .group-row {
+    display: flex; flex-wrap: wrap; gap: 0.3rem; align-items: center;
+    padding: 0.25rem 0; border-bottom: 1px dashed var(--border);
+  }
+  .group-row:last-child { border-bottom: none; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.15rem; align-items: center; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: var(--chip-bg); color: var(--chip-fg);
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 0.12rem 0.55rem; font-size: 0.78rem; cursor: pointer; user-select: none;
+  }
+  .chip:hover { border-color: var(--accent); }
+  .chip.tag-match { box-shadow: 0 0 0 2px #9333ea; border-color: #9333ea; }
+  .chip.active { background: var(--chip-active-bg); color: var(--chip-active-fg); border-color: var(--chip-active-bg); }
+  .chip.group-chip { font-weight: 700; background: var(--chip-group-bg); color: var(--chip-group-fg); border-color: var(--chip-group-bg); margin-right: 0.3rem; }
+  .chip.group-chip.active { background: var(--chip-group-active-bg); color: var(--chip-group-active-fg); border-color: var(--chip-group-active-bg); }
+  .chip.tag { background: var(--chip-tag-bg); color: var(--chip-tag-fg); }
+  .chip.tag.active { background: var(--chip-tag-active-bg); color: var(--chip-active-fg); border-color: var(--chip-tag-active-bg); }
+  .chip.channel { background: var(--chip-channel-bg); color: var(--chip-channel-fg); }
+  .chip.channel.active { background: var(--chip-channel-active-bg); color: #fff; border-color: var(--chip-channel-active-bg); }
+  .chip .n { opacity: 0.65; font-size: 0.72rem; }
+  #resetBtn {
+    text-transform: none; letter-spacing: normal; font-weight: 400;
+    font-size: 0.75rem; background: none; border: 1px solid var(--border);
+    color: var(--muted); border-radius: 6px; padding: 0.2rem 0.6rem; cursor: pointer; flex-shrink: 0;
+  }
+  #resetBtn:hover { color: var(--accent); border-color: var(--accent); }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin-top: 0.5rem; }
+  thead th {
+    background: var(--head-bg); text-align: left; padding: 0.5rem 0.7rem;
+    border-bottom: 2px solid var(--border); user-select: none; white-space: nowrap;
+  }
+  thead th .th-label { cursor: pointer; display: inline-block; white-space: nowrap; }
+  thead th .th-label:hover { color: var(--accent); }
+  thead th .arrow { font-size: 0.7rem; opacity: 0.6; margin-left: 0.2rem; }
+  thead th input#titleFilterInput {
+    width: 180px; max-width: 100%; box-sizing: border-box; margin-left: 0.6rem;
+    font-weight: 400; text-transform: none; cursor: text;
+    padding: 0.2rem 0.5rem; font-size: 0.78rem;
+    background: var(--card); color: var(--fg); border: 1px solid var(--border); border-radius: 5px;
+  }
+  thead th input#titleFilterInput:focus { outline: none; border-color: var(--accent); }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody td { padding: 0.5rem 0.7rem; vertical-align: middle; }
+  td.title a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  td.title a mark { background: #9333ea; color: #fff; border-radius: 3px; padding: 0 0.1rem; }
+  td.title a:hover { text-decoration: underline; }
+  td.tags { max-width: 300px; }
+  td.tags span { display: inline-block; border-radius: 5px; padding: 0.05rem 0.4rem; font-size: 0.68rem; margin: 0.1rem 0.2rem 0.1rem 0; background: var(--chip-tag-bg); color: var(--chip-tag-fg); }
+  td.duration, td.views { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.date { font-weight: 600; white-space: nowrap; }
+  td.date.approx { font-weight: 400; font-style: italic; }
+  .age-fresh { color: var(--age-fresh); }
+  .age-ok { color: var(--age-ok); }
+  .age-aging { color: var(--age-aging); }
+  .age-old { color: var(--age-old); opacity: 0.75; }
+  #tooltip {
+    position: fixed; display: none; z-index: 1000; max-width: 340px;
+    background: var(--tooltip-bg); color: var(--tooltip-fg);
+    border-radius: 8px; padding: 0.8rem 1rem; font-size: 0.82rem; line-height: 1.55;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35); pointer-events: none;
+  }
+  #tooltip b { display: block; margin-bottom: 0.35rem; font-size: 0.88rem; }
+  #tooltip .row { opacity: 0.85; }
+  .range-wrap { padding: 0.5rem 0.2rem 0.2rem; }
+  .range-slider { position: relative; height: 32px; }
+  .range-slider input[type="range"] {
+    position: absolute; top: 10px; left: 0; width: 100%; margin: 0;
+    -webkit-appearance: none; appearance: none; background: transparent; pointer-events: none;
+  }
+  .range-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; pointer-events: auto;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--accent); cursor: pointer; border: 2px solid var(--card);
+    box-shadow: 0 0 0 1px var(--border); margin-top: -6px;
+  }
+  .range-slider input[type="range"]::-moz-range-thumb {
+    pointer-events: auto; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--accent); cursor: pointer; border: 2px solid var(--card);
+  }
+  .range-slider input[type="range"]::-webkit-slider-runnable-track { background: transparent; }
+  .range-track { position: absolute; top: 14px; left: 0; right: 0; height: 4px; background: var(--border); border-radius: 2px; }
+  .range-track-fill { position: absolute; top: 14px; height: 4px; background: var(--accent); border-radius: 2px; }
+  .range-ticks { position: relative; height: 16px; margin-top: 2px; }
+  .range-ticks .tick { position: absolute; top: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; pointer-events: none; }
+  .range-ticks .tick .bar { width: 1px; height: 5px; background: var(--border); }
+  .range-ticks .tick .lbl { font-size: 0.62rem; color: var(--muted); margin-top: 1px; white-space: nowrap; }
+  #dateRangeLabel { text-transform: none; letter-spacing: normal; font-weight: 400; font-size: 0.75rem; color: var(--muted); }
+  #dateRangeLabel b { color: var(--accent); }
+  .footer { margin-top: 1.5rem; font-size: 0.75rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<h1>Vidéos Google Cloud Tech — recherche par technologie</h1>
+<p class="subtitle" id="subtitle"></p>
+
+<div id="filterArea"></div>
+
+<div class="table-wrap">
+<table>
+  <thead><tr id="headerRow"></tr></thead>
+  <tbody id="tbody"></tbody>
+</table>
+</div>
+
+<p class="footer" id="footer"></p>
+<div id="tooltip"></div>
+
+<script>
+const DATA = __DATA_JSON__;
+const GROUPS = __GROUPS_JSON__;
+const CHANNELS = __CHANNELS_JSON__;
+const UPDATED = "__UPDATED__";
+
+// --- Âge des vidéos, calculé à l'ouverture de la page depuis la date de publication ---
+const TODAY = Date.now();
+DATA.forEach(v => {
+  v.ageDays = v.published ? Math.max(0, Math.round((TODAY - Date.parse(v.published)) / 86400000)) : null;
+});
+
+document.getElementById('subtitle').innerHTML =
+  'Source : ' + CHANNELS.map(c => '<a href="' + c.url + '" target="_blank">' + c.name + '</a>').join(', ') +
+  ' — ' + DATA.length + ' vidéos, mis à jour le ' + UPDATED + '.';
+document.getElementById('footer').textContent =
+  'Chaque vidéo est taguée automatiquement par des mots-clés sur son titre ; une vidéo peut porter plusieurs tags. ' +
+  'Une date en italique est approximative (déduite de « il y a N mois »).';
+
+function ageClass(days) {
+  if (days == null) return 'age-ok';
+  if (days < 90) return 'age-fresh';
+  if (days < 365) return 'age-ok';
+  if (days < 730) return 'age-aging';
+  return 'age-old';
+}
+function ageLabelFR(days) {
+  if (days == null) return '—';
+  if (days === 0) return "aujourd'hui";
+  if (days === 1) return 'il y a 1 jour';
+  if (days < 30) return 'il y a ' + days + ' jours';
+  if (days < 365) { const m = Math.round(days / 30); return 'il y a ' + m + ' mois'; }
+  const y = Math.round(days / 365);
+  return 'il y a ' + y + (y === 1 ? ' an' : ' ans');
+}
+function shortDuration(sec) {
+  if (!sec) return '';
+  const h = Math.floor(sec / 3600);
+  const m = Math.floor((sec % 3600) / 60);
+  const s = sec % 60;
+  if (h > 0) return h + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+  return m + ':' + String(s).padStart(2,'0');
+}
+function shortViews(n) {
+  if (!n) return '';
+  if (n >= 1e6) return (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + ' M';
+  if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1) + ' k';
+  return String(n);
+}
+function escapeHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function highlightMatch(text, query) {
+  if (!query) return escapeHtml(text);
+  const idx = text.toLowerCase().indexOf(query);
+  if (idx === -1) return escapeHtml(text);
+  return escapeHtml(text.slice(0, idx)) + '<mark>' + escapeHtml(text.slice(idx, idx + query.length)) + '</mark>' + escapeHtml(text.slice(idx + query.length));
+}
+
+// --- Filtres actifs ---
+// Un tag actif = la vidéo doit le porter (ET entre tags). Un groupe actif = la vidéo porte au
+// moins un tag du groupe. Une chaîne active = la vidéo vient de cette chaîne (OU entre chaînes).
+const activeTags = new Set();
+const activeGroups = new Set();
+const activeChannels = new Set();
+const GROUP_TAGS = {};
+GROUPS.forEach(g => { GROUP_TAGS[g.name] = new Set(g.tags); });
+
+function matchesFilters(v, opts) {
+  opts = opts || {};
+  if (!opts.ignoreChannels && activeChannels.size > 0 && !activeChannels.has(v.channel)) return false;
+  for (const t of activeTags) if (!v.tags.includes(t)) return false;
+  for (const g of activeGroups) if (!v.tags.some(t => GROUP_TAGS[g].has(t))) return false;
+  return true;
+}
+
+const tagCounts = {};
+DATA.forEach(v => v.tags.forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; }));
+const groupCounts = {};
+GROUPS.forEach(g => { groupCounts[g.name] = DATA.filter(v => v.tags.some(t => GROUP_TAGS[g.name].has(t))).length; });
+const channelCounts = {};
+DATA.forEach(v => { channelCounts[v.channel] = (channelCounts[v.channel] || 0) + 1; });
+
+const filterArea = document.getElementById('filterArea');
+const tbody = document.getElementById('tbody');
+const tooltip = document.getElementById('tooltip');
+const headerRow = document.getElementById('headerRow');
+
+function countIf(pred) {
+  let n = 0;
+  for (const v of DATA) if (matchesFilters(v) && pred(v)) n++;
+  return n;
+}
+
+function recomputeChipAvailability() {
+  const nothingActive = activeTags.size === 0 && activeGroups.size === 0 && activeChannels.size === 0;
+  document.querySelectorAll('.chip').forEach(chip => {
+    const kind = chip.dataset.kind, key = chip.dataset.key;
+    const nEl = chip.querySelector('.n');
+    const isActive = (kind === 'tag' && activeTags.has(key)) || (kind === 'group' && activeGroups.has(key)) || (kind === 'channel' && activeChannels.has(key));
+    if (isActive) { chip.style.display = ''; return; }
+    let count;
+    if (nothingActive) {
+      count = kind === 'tag' ? tagCounts[key] : kind === 'group' ? groupCounts[key] : channelCounts[key];
+    } else if (kind === 'tag') {
+      count = countIf(v => v.tags.includes(key));
+    } else if (kind === 'group') {
+      count = countIf(v => v.tags.some(t => GROUP_TAGS[key].has(t)));
+    } else {
+      let n = 0;
+      for (const v of DATA) if (v.channel === key && matchesFilters(v, {ignoreChannels: true})) n++;
+      count = n;
+    }
+    if (nEl) nEl.textContent = count || 0;
+    chip.style.display = count === 0 ? 'none' : '';
+  });
+}
+
+function toggle(kind, key) {
+  const set = kind === 'tag' ? activeTags : kind === 'group' ? activeGroups : activeChannels;
+  if (set.has(key)) set.delete(key); else set.add(key);
+  document.querySelectorAll('.chip[data-kind="' + kind + '"][data-key="' + CSS.escape(key) + '"]')
+    .forEach(c => c.classList.toggle('active', set.has(key)));
+  recomputeChipAvailability();
+  renderDateSlider();
+  render();
+}
+
+function makeChip(kind, key, count, container, cls) {
+  const chip = document.createElement('span');
+  chip.className = 'chip ' + cls;
+  chip.dataset.kind = kind;
+  chip.dataset.key = key;
+  chip.innerHTML = escapeHtml(key) + ' <span class="n">' + count + '</span>';
+  chip.addEventListener('click', () => toggle(kind, key));
+  container.appendChild(chip);
+}
+
+// --- Chaînes (affichées seulement s'il y en a plusieurs) ---
+if (Object.keys(channelCounts).length > 1) {
+  const lbl = document.createElement('h3');
+  lbl.className = 'filter-label section-title';
+  lbl.textContent = 'Chaînes';
+  filterArea.appendChild(lbl);
+  const row = document.createElement('div');
+  row.className = 'chips';
+  Object.keys(channelCounts).sort().forEach(c => makeChip('channel', c, channelCounts[c], row, 'channel'));
+  filterArea.appendChild(row);
+}
+
+// --- Technologies : une ligne par famille, repliable, avec recherche de tag ---
+const techDetails = document.createElement('details');
+techDetails.className = 'section-title-details';
+techDetails.open = true;
+const techSummary = document.createElement('summary');
+techSummary.className = 'filter-label section-title';
+techSummary.innerHTML =
+  '<span class="section-title-text">Technologies — ' + GROUPS.length + ' familles, ' + Object.keys(tagCounts).length + ' tags</span>' +
+  '<input type="text" id="tagSearch" placeholder="Rechercher un tag…" autocomplete="off">' +
+  '<button id="resetBtn" type="button">Réinitialiser les filtres</button>';
+techDetails.appendChild(techSummary);
+GROUPS.forEach(g => {
+  const row = document.createElement('div');
+  row.className = 'group-row';
+  makeChip('group', g.name, groupCounts[g.name], row, 'group-chip');
+  g.tags.forEach(t => makeChip('tag', t, tagCounts[t] || 0, row, 'tag'));
+  techDetails.appendChild(row);
+});
+filterArea.appendChild(techDetails);
+
+const tagSearchInput = document.getElementById('tagSearch');
+tagSearchInput.addEventListener('click', (e) => e.stopPropagation());
+tagSearchInput.addEventListener('input', (e) => {
+  const q = e.target.value.trim().toLowerCase();
+  let any = false;
+  document.querySelectorAll('.chip[data-kind="tag"], .chip[data-kind="group"]').forEach(chip => {
+    const isMatch = q.length > 0 && chip.dataset.key.toLowerCase().includes(q);
+    chip.classList.toggle('tag-match', isMatch);
+    if (isMatch) any = true;
+  });
+  if (any) techDetails.open = true;
+});
+
+// --- Date (double curseur, échelle par rang : un même écart de curseur = un même nombre de vidéos) ---
+const SLIDER_MAX = 1000;
+let sortedAgesActive = [], N_AGES_ACTIVE = 1, AGE_MAX_ACTIVE = 1;
+let ageMin = 0, ageMax = Infinity;
+let ageMinInput, ageMaxInput, rangeFill;
+
+function daysFromSlider(u) {
+  const idx = Math.round((u / SLIDER_MAX) * (N_AGES_ACTIVE - 1));
+  return sortedAgesActive[Math.max(0, Math.min(N_AGES_ACTIVE - 1, idx))];
+}
+function sliderFromDays(d) {
+  let lo = 0, hi = N_AGES_ACTIVE;
+  while (lo < hi) { const mid = (lo + hi) >> 1; if (sortedAgesActive[mid] <= d) lo = mid + 1; else hi = mid; }
+  return Math.round((lo / N_AGES_ACTIVE) * SLIDER_MAX);
+}
+function computeActiveAges() {
+  sortedAgesActive = DATA.filter(v => matchesFilters(v)).map(v => v.ageDays).filter(d => d != null).sort((a, b) => a - b);
+  N_AGES_ACTIVE = sortedAgesActive.length || 1;
+  AGE_MAX_ACTIVE = sortedAgesActive.length ? sortedAgesActive[sortedAgesActive.length - 1] : 1;
+}
+
+const lblDate = document.createElement('h3');
+lblDate.className = 'filter-label section-title';
+lblDate.innerHTML = 'Date de publication <span id="dateRatio" class="count-badge"></span> <span id="dateRangeLabel"></span>';
+filterArea.appendChild(lblDate);
+const dateRangeLabel = lblDate.querySelector('#dateRangeLabel');
+const rangeWrap = document.createElement('div');
+rangeWrap.className = 'range-wrap';
+filterArea.appendChild(rangeWrap);
+
+function dateFromAge(days) {
+  return new Date(TODAY - days * 86400000).toLocaleDateString('fr-FR', {year: 'numeric', month: 'short'});
+}
+function countInDateRange() {
+  return DATA.filter(v => v.ageDays != null && v.ageDays >= ageMin && v.ageDays <= ageMax && matchesFilters(v)).length;
+}
+function hideOverlappingTickLabels(container) {
+  let lastRight = -Infinity;
+  container.querySelectorAll('.tick .lbl').forEach(lbl => {
+    lbl.style.visibility = 'visible';
+    const rect = lbl.getBoundingClientRect();
+    if (rect.left < lastRight + 4) lbl.style.visibility = 'hidden'; else lastRight = rect.right;
+  });
+}
+function updateRangeUI() {
+  const pctMin = (Number(ageMinInput.value) / SLIDER_MAX) * 100;
+  const pctMax = (Number(ageMaxInput.value) / SLIDER_MAX) * 100;
+  rangeFill.style.left = pctMin + '%';
+  rangeFill.style.width = (pctMax - pctMin) + '%';
+  dateRangeLabel.innerHTML = 'Du <b>' + dateFromAge(ageMax) + '</b> au <b>' + dateFromAge(ageMin) + '</b>' +
+    ' (' + (ageMin === 0 ? "aujourd'hui" : 'il y a ' + ageMin + ' j') + ' → il y a ' + ageMax + ' j)';
+  document.getElementById('dateRatio').textContent = countInDateRange() + '/' + N_AGES_ACTIVE;
+}
+function renderDateSlider() {
+  computeActiveAges();
+  ageMin = 0;
+  ageMax = AGE_MAX_ACTIVE;
+  const tickPoints = [
+    ...[1,2,3,4,5,6,9,12].map(m => ({days: m*30, label: m + 'm'})),
+    ...[2,3,4,5,6,7,8,9,10,11,12].map(y => ({days: y*365, label: y + 'a'})),
+  ].filter(t => t.days <= AGE_MAX_ACTIVE);
+  const ticksHtml = tickPoints.map(t =>
+    '<span class="tick" style="left:' + (sliderFromDays(t.days) / SLIDER_MAX * 100) + '%"><span class="bar"></span><span class="lbl">' + t.label + '</span></span>'
+  ).join('');
+  rangeWrap.innerHTML =
+    '<div class="range-slider"><div class="range-track"></div><div class="range-track-fill" id="rangeFill"></div>' +
+    '<input type="range" id="ageMinInput" min="0" max="' + SLIDER_MAX + '" value="0">' +
+    '<input type="range" id="ageMaxInput" min="0" max="' + SLIDER_MAX + '" value="' + SLIDER_MAX + '"></div>' +
+    '<div class="range-ticks" id="rangeTicks">' + ticksHtml + '</div>';
+  ageMinInput = document.getElementById('ageMinInput');
+  ageMaxInput = document.getElementById('ageMaxInput');
+  rangeFill = document.getElementById('rangeFill');
+  const rangeTicks = document.getElementById('rangeTicks');
+  ageMinInput.addEventListener('input', () => {
+    const uMin = Math.min(Number(ageMinInput.value), Number(ageMaxInput.value));
+    ageMinInput.value = uMin; ageMin = daysFromSlider(uMin); updateRangeUI(); render();
+  });
+  ageMaxInput.addEventListener('input', () => {
+    const uMax = Math.max(Number(ageMaxInput.value), Number(ageMinInput.value));
+    ageMaxInput.value = uMax; ageMax = daysFromSlider(uMax); updateRangeUI(); render();
+  });
+  updateRangeUI();
+  hideOverlappingTickLabels(rangeTicks);
+  window.addEventListener('resize', () => hideOverlappingTickLabels(rangeTicks), {once: true});
+}
+
+document.getElementById('resetBtn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  activeTags.clear(); activeGroups.clear(); activeChannels.clear();
+  document.querySelectorAll('.chip.active').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.chip.tag-match').forEach(c => c.classList.remove('tag-match'));
+  tagSearchInput.value = '';
+  titleFilter = '';
+  document.getElementById('titleFilterInput').value = '';
+  recomputeChipAvailability();
+  renderDateSlider();
+  render();
+});
+
+// --- Tableau ---
+const cols = [
+  {key: 'title', label: 'Titre'},
+  {key: 'tags', label: 'Tags', nosort: true},
+  {key: 'duration', label: 'Durée'},
+  {key: 'views', label: 'Vues'},
+  {key: 'date', label: 'Date'},
+];
+let titleFilter = '';
+let sortKey = 'date', sortDir = 'asc';
+
+cols.forEach(col => {
+  const th = document.createElement('th');
+  const labelSpan = document.createElement('span');
+  labelSpan.className = 'th-label';
+  labelSpan.innerHTML = col.label + (col.nosort ? '' : '<span class="arrow">' + (col.key === sortKey ? '▲' : '') + '</span>');
+  th.appendChild(labelSpan);
+  if (!col.nosort) {
+    labelSpan.addEventListener('click', () => {
+      sortDir = (sortKey === col.key && sortDir === 'asc') ? 'desc' : 'asc';
+      sortKey = col.key;
+      headerRow.querySelectorAll('th .arrow').forEach(a => a.textContent = '');
+      labelSpan.querySelector('.arrow').textContent = sortDir === 'asc' ? '▲' : '▼';
+      render();
+    });
+  }
+  if (col.key === 'title') {
+    const titleInput = document.createElement('input');
+    titleInput.type = 'text'; titleInput.id = 'titleFilterInput';
+    titleInput.placeholder = 'Filtrer par titre…'; titleInput.autocomplete = 'off';
+    titleInput.addEventListener('input', (e) => { titleFilter = e.target.value.trim().toLowerCase(); render(); });
+    th.appendChild(titleInput);
+    const titleRatio = document.createElement('span');
+    titleRatio.id = 'titleFilterRatio'; titleRatio.className = 'count-badge'; titleRatio.style.display = 'none';
+    th.appendChild(titleRatio);
+  }
+  headerRow.appendChild(th);
+});
+
+function getFiltered(applyTitle) {
+  if (applyTitle === undefined) applyTitle = true;
+  let list = DATA.filter(v => matchesFilters(v));
+  if (applyTitle && titleFilter) list = list.filter(v => v.title.toLowerCase().includes(titleFilter));
+  if (ageMin > 0 || ageMax < AGE_MAX_ACTIVE) {
+    list = list.filter(v => v.ageDays != null && v.ageDays >= ageMin && v.ageDays <= ageMax);
+  }
+  if (sortKey) {
+    list = list.slice().sort((a, b) => {
+      let av, bv;
+      if (sortKey === 'title') { av = a.title.toLowerCase(); bv = b.title.toLowerCase(); }
+      else if (sortKey === 'duration') { av = a.durationSec; bv = b.durationSec; }
+      else if (sortKey === 'views') { av = a.views; bv = b.views; }
+      else { av = a.ageDays == null ? 999999 : a.ageDays; bv = b.ageDays == null ? 999999 : b.ageDays; }
+      if (av < bv) return sortDir === 'asc' ? -1 : 1;
+      if (av > bv) return sortDir === 'asc' ? 1 : -1;
+      return 0;
+    });
+  }
+  return list;
+}
+
+function render() {
+  const list = getFiltered();
+  const titleRatio = document.getElementById('titleFilterRatio');
+  if (titleFilter) { titleRatio.textContent = list.length + '/' + getFiltered(false).length; titleRatio.style.display = 'inline'; }
+  else titleRatio.style.display = 'none';
+
+  const frag = document.createDocumentFragment();
+  for (const v of list) {
+    const tr = document.createElement('tr');
+    const tdTitle = document.createElement('td');
+    tdTitle.className = 'title';
+    const a = document.createElement('a');
+    a.href = v.url; a.target = '_blank'; a.rel = 'noopener';
+    a.innerHTML = highlightMatch(v.title, titleFilter);
+    tdTitle.appendChild(a);
+    const tdTags = document.createElement('td');
+    tdTags.className = 'tags';
+    tdTags.innerHTML = v.tags.map(t => '<span>' + escapeHtml(t) + '</span>').join('');
+    const tdDur = document.createElement('td');
+    tdDur.className = 'duration'; tdDur.textContent = shortDuration(v.durationSec);
+    const tdViews = document.createElement('td');
+    tdViews.className = 'views'; tdViews.textContent = shortViews(v.views);
+    const tdDate = document.createElement('td');
+    tdDate.className = 'date ' + ageClass(v.ageDays) + (v.approx ? ' approx' : '');
+    tdDate.textContent = ageLabelFR(v.ageDays);
+    tr.append(tdTitle, tdTags, tdDur, tdViews, tdDate);
+
+    tr.addEventListener('mouseenter', () => {
+      tooltip.innerHTML =
+        '<b>' + escapeHtml(v.title) + '</b>' +
+        '<div class="row">⏱ Durée : ' + (shortDuration(v.durationSec) || '—') + '</div>' +
+        '<div class="row">📺 Chaîne : ' + escapeHtml(v.credits || v.channel || '—') + '</div>' +
+        '<div class="row">👁 Vues : ' + (v.views ? v.views.toLocaleString('fr-FR') : '—') + '</div>' +
+        '<div class="row">📅 Publiée : ' + (v.published || '—') + (v.approx ? ' (approx.)' : '') + '</div>' +
+        '<div class="row">🏷 ' + escapeHtml(v.tags.join(', ')) + '</div>' +
+        '<div class="row">🔗 ' + v.url + '</div>';
+      tooltip.style.display = 'block';
+    });
+    tr.addEventListener('mousemove', (e) => {
+      const pad = 16;
+      let x = e.clientX + pad, y = e.clientY + pad;
+      if (x + tooltip.offsetWidth > window.innerWidth) x = e.clientX - tooltip.offsetWidth - pad;
+      if (y + tooltip.offsetHeight > window.innerHeight) y = e.clientY - tooltip.offsetHeight - pad;
+      tooltip.style.left = x + 'px'; tooltip.style.top = y + 'px';
+    });
+    tr.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+    frag.appendChild(tr);
+  }
+  tbody.innerHTML = '';
+  tbody.appendChild(frag);
+}
+
+renderDateSlider();
+render();
+</script>
+
+</body>
+</html>
