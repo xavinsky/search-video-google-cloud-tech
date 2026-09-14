@@ -23,7 +23,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Crawl le 1er du mois ou sur lancement manuel ; un push ne fait que regénérer la page.
       # continue-on-error : si YouTube bloque, on publie quand même la base existante.
@@ -47,7 +47,7 @@ jobs:
       - name: Génération de la page
         run: python3 scripts/build.py
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: docs
 
@@ -62,4 +62,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
