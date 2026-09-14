@@ -1,0 +1,65 @@
+name: Mise à jour et publication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "channels.json"
+      - "data/**"
+      - "scripts/**"
+      - "templates/**"
+      - ".github/workflows/pages.yml"
+  schedule:
+    - cron: "17 5 1 * *"
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # Crawl le 1er du mois ou sur lancement manuel ; un push ne fait que regénérer la page.
+      # continue-on-error : si YouTube bloque, on publie quand même la base existante.
+      - name: Crawl des nouvelles vidéos
+        id: crawl
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: python3 scripts/update.py --no-build --delay 1
+
+      # Commit uniquement s'il y a de nouvelles vidéos ou des dates précisées,
+      # pour ne pas créer de commit juste pour des compteurs de vues.
+      - name: Commit de la base
+        if: steps.crawl.outcome == 'success' && (steps.crawl.outputs.added != '0' || steps.crawl.outputs.dated != '0')
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/videos.json
+          git commit -m "chore(data): ${{ steps.crawl.outputs.added }} nouvelle(s) vidéo(s)"
+          git push
+
+      - name: Génération de la page
+        run: python3 scripts/build.py
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

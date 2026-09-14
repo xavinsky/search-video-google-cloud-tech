@@ -4,6 +4,7 @@
 Usage : python3 scripts/build.py
 """
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -55,6 +56,8 @@ def main():
         print(f"\n⚠️  {len(unclassified)} vidéo(s) sans aucun tag — à classer (pas de fourre-tout !) :")
         for t in unclassified:
             print("  -", t)
+            if os.environ.get("GITHUB_ACTIONS"):
+                print(f"::warning title=Vidéo non classée::{t}")
         print("Ajoute un motif dans GROUPS ou une entrée dans MANUAL_OVERRIDES (scripts/tags.py), puis relance.\n")
 
     used = {t for v in videos for t in v["tags"]}
@@ -76,4 +79,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(1 if main() else 0)
+    main()

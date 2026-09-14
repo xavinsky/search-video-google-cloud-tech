@@ -2,9 +2,27 @@
 
 Page de recherche dans les vidéos de la chaîne YouTube [Google Cloud Tech](https://www.youtube.com/@googlecloudtech), taguées automatiquement par technologie (BigQuery, Dataflow, GKE, Vertex AI, ADK...) et regroupées par famille (Data & Analytics, Bases de données, IA & Machine Learning, Compute...).
 
-**Page :** `docs/index.html` — filtrage par famille, par tag (cumulables), par chaîne, par plage de dates, par mot du titre ; tri par titre, durée, vues ou date. Fonctionne hors ligne, sans serveur : un seul fichier HTML autonome.
+**Page :** https://xavinsky.github.io/search-video-google-cloud-tech/ — filtrage par famille, par tag (cumulables), par chaîne, par plage de dates, par mot du titre ; tri par titre, durée, vues ou date. Un seul fichier HTML autonome, qui fonctionne aussi hors ligne une fois généré dans `docs/index.html`.
 
-## Mettre à jour
+## Publication automatique
+
+Le workflow `.github/workflows/pages.yml` génère la page et la publie sur GitHub Pages :
+
+| Déclencheur | Effet |
+|-------------|-------|
+| push sur `main` touchant les données, les scripts, le template ou `channels.json` | regénère et publie la page, sans crawl |
+| le 1er de chaque mois | crawl des nouvelles vidéos, commit de `data/videos.json` s'il y a du nouveau, puis publication |
+| lancement manuel (onglet Actions, « Run workflow ») | idem |
+
+Le crawl en CI est toujours incrémental : il s'arrête dès qu'une page ne contient plus de nouveauté. Le parcours complet (`--full`) se lance uniquement en local, quand c'est nécessaire.
+
+Le commit de la base n'a lieu que si des vidéos ont été ajoutées ou des dates précisées. Les vues rafraîchies seules ne créent pas de commit, mais la page publiée en tient compte. Si YouTube bloque le crawl depuis GitHub, l'étape échoue sans bloquer la publication de la base existante : lancer alors la mise à jour en local et pousser. Après un crawl mensuel ou manuel, faire `git pull` avant de pousser des modifications locales.
+
+Les vidéos non classées apparaissent en avertissements dans le résumé de l'exécution.
+
+GitHub Pages doit être configuré avec la source « GitHub Actions » (Settings, Pages).
+
+## Mettre à jour en local
 
 ```bash
 python3 scripts/update.py
@@ -51,7 +69,8 @@ scripts/build.py       taggage et génération de docs/index.html
 scripts/tags.py        taxonomie : familles → tags → regex sur le titre, corrections manuelles
 scripts/db.py          lecture/écriture de data/videos.json
 templates/index.html   template de la page (placeholders __DATA_JSON__, __GROUPS_JSON__, __CHANNELS_JSON__, __UPDATED__)
-docs/index.html        page générée — ne jamais éditer à la main
+docs/index.html        page générée, non versionnée — ne jamais éditer à la main
+.github/workflows/     génération et publication sur GitHub Pages, crawl mensuel ou manuel
 ```
 
 ## Comment ça marche

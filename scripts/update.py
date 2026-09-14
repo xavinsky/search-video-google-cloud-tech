@@ -14,8 +14,11 @@ seront précisées aux exécutions suivantes.
   --details N nombre maximum de pages vidéo consultées pour obtenir la date exacte
   --no-build  ne régénère pas la page HTML
   --delay S   pause entre deux requêtes YouTube (défaut 0.5 s)
+
+En GitHub Actions, écrit added=N et dated=N dans $GITHUB_OUTPUT.
 """
 import argparse
+import os
 import sys
 import time
 from datetime import date
@@ -107,14 +110,20 @@ def main():
     args = ap.parse_args()
 
     db = load_db()
-    crawl(db, args.full, args.delay)
+    added = crawl(db, args.full, args.delay)
     db["updated"] = date.today().isoformat()
     save_db(db)
+    dated = 0
     if args.details > 0:
-        fetch_details(db, args.details, args.delay)
+        dated = fetch_details(db, args.details, args.delay)
         save_db(db)
     remaining = sum(1 for v in db["videos"] if v.get("date_precision") != "exact")
     print(f"{len(db['videos'])} vidéos en base, {remaining} avec date approximative")
+    # En GitHub Actions : expose les compteurs pour décider s'il faut commiter la base
+    github_output = os.environ.get("GITHUB_OUTPUT")
+    if github_output:
+        with open(github_output, "a", encoding="utf-8") as f:
+            f.write(f"added={added}\ndated={dated}\n")
     if not args.no_build:
         import build
         build.main()
