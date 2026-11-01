@@ -1,6 +1,28 @@
 {
- "updated": "2026-10-01",
+ "updated": "2026-11-01",
  "videos": [
+  {
+   "id": "pabDkNR7jIs",
+   "title": "The Future of AI Infrastructure",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 0,
+   "views": 0,
+   "published": "2026-10-27",
+   "date_precision": "exact"
+  },
+  {
+   "id": "k9Sv9mkyjcQ",
+   "title": "Stop building voice AI like an API call",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 55,
+   "views": 4123,
+   "published": "2026-09-14",
+   "date_precision": "exact"
+  },
   {
    "id": "_qVCARkqR30",
    "title": "Supercharge your coding agent with the Google Cloud Developer Plugin",
@@ -327,7 +349,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 41,
-   "views": 2970,
+   "views": 3100,
    "published": "2026-08-19",
    "date_precision": "exact"
   },
@@ -338,7 +360,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 386,
-   "views": 15451,
+   "views": 17000,
    "published": "2026-08-19",
    "date_precision": "exact"
   },
@@ -349,7 +371,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 3275,
-   "views": 19103,
+   "views": 29000,
    "published": "2026-08-18",
    "date_precision": "exact"
   },
@@ -360,7 +382,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 700,
-   "views": 3519,
+   "views": 3800,
    "published": "2026-08-18",
    "date_precision": "exact"
   },
@@ -371,7 +393,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1977,
-   "views": 4102,
+   "views": 4600,
    "published": "2026-08-17",
    "date_precision": "exact"
   },
@@ -382,7 +404,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 329,
-   "views": 21429,
+   "views": 28000,
    "published": "2026-08-17",
    "date_precision": "exact"
   },
@@ -393,7 +415,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 3578,
-   "views": 7050,
+   "views": 8700,
    "published": "2026-08-15",
    "date_precision": "exact"
   },
@@ -404,7 +426,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 113,
-   "views": 6917,
+   "views": 7100,
    "published": "2026-08-14",
    "date_precision": "exact"
   },
@@ -415,7 +437,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 533,
-   "views": 4405,
+   "views": 4900,
    "published": "2026-08-13",
    "date_precision": "exact"
   },
@@ -426,7 +448,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 44,
-   "views": 3956,
+   "views": 4000,
    "published": "2026-08-13",
    "date_precision": "exact"
   },
@@ -437,7 +459,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 267,
-   "views": 10840,
+   "views": 11000,
    "published": "2026-08-13",
    "date_precision": "exact"
   },
@@ -448,7 +470,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 56,
-   "views": 5491,
+   "views": 6300,
    "published": "2026-08-06",
    "date_precision": "exact"
   },
@@ -459,7 +481,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 581,
-   "views": 3981,
+   "views": 4400,
    "published": "2026-08-06",
    "date_precision": "exact"
   },
@@ -470,7 +492,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 25,
-   "views": 6116,
+   "views": 7700,
    "published": "2026-08-03",
    "date_precision": "exact"
   },
@@ -481,7 +503,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "Google Cloud Tech and 2 more",
    "duration_sec": 3461,
-   "views": 7498,
+   "views": 9100,
    "published": "2026-08-03",
    "date_precision": "exact"
   },
@@ -492,7 +514,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "Google Cloud Tech and Google for Developers",
    "duration_sec": 257,
-   "views": 17060,
+   "views": 19000,
    "published": "2026-07-30",
    "date_precision": "exact"
   },
@@ -503,7 +525,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 203,
-   "views": 5313,
+   "views": 6000,
    "published": "2026-07-29",
    "date_precision": "exact"
   },
@@ -514,7 +536,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 622,
-   "views": 6444,
+   "views": 6600,
    "published": "2026-07-28",
    "date_precision": "exact"
   },
@@ -525,7 +547,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 608,
-   "views": 5780,
+   "views": 6400,
    "published": "2026-07-28",
    "date_precision": "exact"
   },
@@ -547,7 +569,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1468,
-   "views": 19954,
+   "views": 21000,
    "published": "2026-07-27",
    "date_precision": "exact"
   },
@@ -558,7 +580,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 141,
-   "views": 2250,
+   "views": 2400,
    "published": "2026-07-27",
    "date_precision": "exact"
   },
@@ -569,7 +591,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 490,
-   "views": 2870,
+   "views": 3100,
    "published": "2026-07-23",
    "date_precision": "exact"
   },
@@ -580,7 +602,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "Google Cloud Tech and Google for Developers",
    "duration_sec": 201,
-   "views": 4581,
+   "views": 5200,
    "published": "2026-07-23",
    "date_precision": "exact"
   },
@@ -591,7 +613,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 4005,
-   "views": 3684,
+   "views": 4100,
    "published": "2026-07-21",
    "date_precision": "exact"
   },
@@ -602,7 +624,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 788,
-   "views": 13682,
+   "views": 14000,
    "published": "2026-07-21",
    "date_precision": "exact"
   },
@@ -613,7 +635,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 134,
-   "views": 15696,
+   "views": 16000,
    "published": "2026-07-21",
    "date_precision": "exact"
   },
@@ -624,7 +646,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 542,
-   "views": 1307,
+   "views": 1700,
    "published": "2026-07-20",
    "date_precision": "exact"
   },
@@ -635,7 +657,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 29,
-   "views": 5204,
+   "views": 5400,
    "published": "2026-07-17",
    "date_precision": "exact"
   },
@@ -646,7 +668,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "Google Cloud Tech and Google for Developers",
    "duration_sec": 175,
-   "views": 62000,
+   "views": 101000,
    "published": "2026-07-16",
    "date_precision": "exact"
   },
@@ -657,7 +679,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 373,
-   "views": 2760,
+   "views": 3000,
    "published": "2026-07-16",
    "date_precision": "exact"
   },
@@ -668,7 +690,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "Google Cloud Tech and Smitha Kolan - Machine Learning Engineer",
    "duration_sec": 605,
-   "views": 122389,
+   "views": 163000,
    "published": "2026-07-15",
    "date_precision": "exact"
   },
@@ -679,7 +701,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "Google Cloud Tech and KodeKloud",
    "duration_sec": 3897,
-   "views": 16828,
+   "views": 26000,
    "published": "2026-07-13",
    "date_precision": "exact"
   },
@@ -690,7 +712,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 301,
-   "views": 2741,
+   "views": 3900,
    "published": "2026-07-10",
    "date_precision": "exact"
   },
@@ -701,7 +723,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1156,
-   "views": 25996,
+   "views": 27000,
    "published": "2026-07-10",
    "date_precision": "exact"
   },
@@ -712,7 +734,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 443,
-   "views": 1713,
+   "views": 1800,
    "published": "2026-07-09",
    "date_precision": "exact"
   },
@@ -723,7 +745,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 406,
-   "views": 390,
+   "views": 445,
    "published": "2026-07-09",
    "date_precision": "exact"
   },
@@ -745,7 +767,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 307,
-   "views": 273,
+   "views": 303,
    "published": "2026-07-09",
    "date_precision": "exact"
   },
@@ -756,7 +778,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 372,
-   "views": 1746,
+   "views": 1800,
    "published": "2026-07-09",
    "date_precision": "exact"
   },
@@ -767,7 +789,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 348,
-   "views": 999,
+   "views": 1400,
    "published": "2026-07-09",
    "date_precision": "exact"
   },
@@ -789,7 +811,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 299,
-   "views": 7465,
+   "views": 7700,
    "published": "2026-07-08",
    "date_precision": "exact"
   },
@@ -800,7 +822,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "Google Cloud Tech and Smitha Kolan - Machine Learning Engineer",
    "duration_sec": 823,
-   "views": 28462,
+   "views": 35000,
    "published": "2026-07-08",
    "date_precision": "exact"
   },
@@ -811,7 +833,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 3915,
-   "views": 5458,
+   "views": 5500,
    "published": "2026-07-07",
    "date_precision": "exact"
   },
@@ -822,7 +844,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 25,
-   "views": 4057,
+   "views": 4100,
    "published": "2026-07-06",
    "date_precision": "exact"
   },
@@ -833,7 +855,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2761,
-   "views": 29253,
+   "views": 32000,
    "published": "2026-07-06",
    "date_precision": "exact"
   },
@@ -866,7 +888,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "Google Cloud Tech and Smitha Kolan - Machine Learning Engineer",
    "duration_sec": 745,
-   "views": 1000000,
+   "views": 1200000,
    "published": "2026-07-01",
    "date_precision": "exact"
   },
@@ -877,7 +899,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 5090,
-   "views": 6100,
+   "views": 6200,
    "published": "2026-06-30",
    "date_precision": "exact"
   },
@@ -888,7 +910,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "Google Cloud Tech and Google for Developers",
    "duration_sec": 338,
-   "views": 33000,
+   "views": 37000,
    "published": "2026-06-30",
    "date_precision": "exact"
   },
@@ -910,7 +932,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 676,
-   "views": 9500,
+   "views": 10000,
    "published": "2026-06-29",
    "date_precision": "exact"
   },
@@ -921,7 +943,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 223,
-   "views": 5800,
+   "views": 6200,
    "published": "2026-06-28",
    "date_precision": "exact"
   },
@@ -932,7 +954,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 88,
-   "views": 16716,
+   "views": 17000,
    "published": "2026-06-27",
    "date_precision": "exact"
   },
@@ -965,7 +987,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 79,
-   "views": 4109,
+   "views": 4300,
    "published": "2026-06-26",
    "date_precision": "exact"
   },
@@ -976,7 +998,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1758,
-   "views": 731,
+   "views": 771,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -987,7 +1009,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2682,
-   "views": 420,
+   "views": 449,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -998,7 +1020,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2417,
-   "views": 1300,
+   "views": 1600,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1009,7 +1031,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2741,
-   "views": 492,
+   "views": 528,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1020,7 +1042,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1186,
-   "views": 381,
+   "views": 386,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1031,7 +1053,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2439,
-   "views": 1314,
+   "views": 1400,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1042,7 +1064,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2327,
-   "views": 817,
+   "views": 862,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1053,7 +1075,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2642,
-   "views": 437,
+   "views": 465,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1064,7 +1086,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2974,
-   "views": 232,
+   "views": 251,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1075,7 +1097,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2331,
-   "views": 707,
+   "views": 785,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1086,7 +1108,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1597,
-   "views": 295,
+   "views": 324,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1097,7 +1119,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2504,
-   "views": 539,
+   "views": 570,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1108,7 +1130,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1291,
-   "views": 304,
+   "views": 317,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1119,7 +1141,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 112,
-   "views": 245,
+   "views": 252,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1130,7 +1152,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2191,
-   "views": 218,
+   "views": 229,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1141,7 +1163,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1670,
-   "views": 639,
+   "views": 711,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1152,7 +1174,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1426,
-   "views": 754,
+   "views": 957,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1163,7 +1185,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2667,
-   "views": 2327,
+   "views": 2400,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1174,7 +1196,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2497,
-   "views": 125,
+   "views": 153,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1185,7 +1207,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2690,
-   "views": 2200,
+   "views": 2700,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1196,7 +1218,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2664,
-   "views": 287,
+   "views": 302,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1207,7 +1229,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2363,
-   "views": 941,
+   "views": 1100,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1218,7 +1240,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1842,
-   "views": 801,
+   "views": 943,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1229,7 +1251,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2619,
-   "views": 217,
+   "views": 241,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1262,7 +1284,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1950,
-   "views": 451,
+   "views": 477,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1273,7 +1295,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2754,
-   "views": 4600,
+   "views": 4800,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1284,7 +1306,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2538,
-   "views": 1500,
+   "views": 1700,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1295,7 +1317,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2746,
-   "views": 457,
+   "views": 473,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1306,7 +1328,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2251,
-   "views": 334,
+   "views": 360,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1328,7 +1350,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2456,
-   "views": 15000,
+   "views": 18000,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1339,7 +1361,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2084,
-   "views": 6810,
+   "views": 6900,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1361,7 +1383,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2104,
-   "views": 732,
+   "views": 855,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1372,7 +1394,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2310,
-   "views": 3500,
+   "views": 4300,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1383,7 +1405,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1773,
-   "views": 567,
+   "views": 580,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1416,7 +1438,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2631,
-   "views": 306,
+   "views": 325,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1427,7 +1449,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2177,
-   "views": 4200,
+   "views": 4500,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1438,7 +1460,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2974,
-   "views": 3042,
+   "views": 3100,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1449,7 +1471,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2156,
-   "views": 352,
+   "views": 378,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1460,7 +1482,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2595,
-   "views": 348,
+   "views": 363,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -1471,7 +1493,7 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 2346,
-   "views": 334,
+   "views": 344,
    "published": "2026-06-25",
    "date_precision": "exact"
   },
@@ -24851,12 +24873,56 @@
    "date_precision": "approx"
   },
   {
+   "id": "xDL5DFMo1-Y",
+   "title": "How voice AI agents control your browser",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 354,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
    "id": "wPdoZRbvaF4",
-   "title": "How to Actually Evaluate (Any) AI Agent: Beyond the Vibe Check",
+   "title": "Why Your AI Agent Fails in Production (And How to Catch It)",
    "channel": "Google Cloud Tech",
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1568,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "w0p3D6dk7u8",
+   "title": "How smart storage turns dark data into AI context",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 60,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "ufqttA-98vc",
+   "title": "👩‍💻 Chrissie Goodrich takes over the Google Cloud Tech channel!",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 29,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "u4n558Ul6w0",
+   "title": "Introducing TorchTPU: Native PyTorch on Google Cloud TPUs",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 308,
    "views": 0,
    "published": null,
    "date_precision": "approx"
@@ -24873,6 +24939,28 @@
    "date_precision": "approx"
   },
   {
+   "id": "tarq5cgw7PE",
+   "title": "AI agent memory",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 42,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "sYYNVN2ePLU",
+   "title": "Agentify your app",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 1289,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
    "id": "r2xhPB-wWIQ",
    "title": "Turn Audio into Action with Gemini 3.5 Transcribe",
    "channel": "Google Cloud Tech",
@@ -24884,12 +24972,89 @@
    "date_precision": "approx"
   },
   {
-   "id": "k9Sv9mkyjcQ",
-   "title": "Stop building voice AI like an API call",
+   "id": "qeWzgLGSkls",
+   "title": "How Knowledge Catalog’s self-learning enrichment grounds enterprise AI agents",
    "channel": "Google Cloud Tech",
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
-   "duration_sec": 55,
+   "duration_sec": 296,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "p2vmRfShi_U",
+   "title": "CodeMender: AI powered vulnerability fixes right in GitHub PRs",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 361,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "ljocUEpTgUA",
+   "title": "Developing with advanced agent workflows in Looker",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 273,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "l8nr0GllLAs",
+   "title": "Coding for 40 tokens/sec on a Pixel 10 📱",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 81,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "kRYDtoGmj3E",
+   "title": "Meet the founders of Astrocade: Build your own video game with just text! (No coding required)",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 2281,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "jX-EGkYIhsI",
+   "title": "IDE-driven deployments: Creating & debugging pipelines with Harness and Google Cloud",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 170,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "hK3xqW_HrP0",
+   "title": "Introducing the TPU agent suite (preview): Open source agents for PyTorch on Cloud TPU",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 270,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "gRhM1h10T3U",
+   "title": "Gemini 4 Carbon: 10 incredible AI demos (1M token output in action)",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 730,
    "views": 0,
    "published": null,
    "date_precision": "approx"
@@ -24901,6 +25066,28 @@
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 598,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "fNImL07VZMk",
+   "title": "AI coding agent on production database? True or False?",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 57,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "czKuoutcwYc",
+   "title": "Google’s approach to security review with agents",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 3730,
    "views": 0,
    "published": null,
    "date_precision": "approx"
@@ -24928,12 +25115,122 @@
    "date_precision": "approx"
   },
   {
+   "id": "ZOUgNXycY7k",
+   "title": "Why Flutter and Go are exploding",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 2809,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "YCUyCuolg_g",
+   "title": "An industry look into AI generated images & videos in fashion",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 562,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "WuqwGPtZwvY",
+   "title": "Google Cloud Live: Inside the Gemini at Work 2026 keynote",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 1405,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "WWG-wIaB4aQ",
+   "title": "Tell your data story with Looker Data Apps",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 171,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "VzpbeVdS_ok",
+   "title": "Security skills for AI agents (From Google security engineers)",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 366,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "VI3TQriNq_E",
+   "title": "What \"one agent, everywhere you work\" actually means",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 38,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "UnkUpqNv-10",
+   "title": "Can Gemini transcribe a song?",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 402,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "UZiDvf2IDl0",
+   "title": "How to build and deploy powerful data apps with agents",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 98,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
    "id": "U96-Wygm5nE",
    "title": "Join Developers Building with Gemini",
    "channel": "Google Cloud Tech",
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 23,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "U58Pb0Xdi3w",
+   "title": "How to onboard to Looker using your favorite LLM and skills",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 264,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "TiH2E2mPZIk",
+   "title": "Scaling agentic coding practices across your team",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 751,
    "views": 0,
    "published": null,
    "date_precision": "approx"
@@ -24983,6 +25280,28 @@
    "date_precision": "approx"
   },
   {
+   "id": "Rv97mm8CZkw",
+   "title": "What happens to your AI agent when you close your lid?",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 56,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "PikEcMgMmls",
+   "title": "Browser control with a live voice agent",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 39,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
    "id": "NkMSCRQNs1M",
    "title": "Gemini is coming to your city",
    "channel": "Google Cloud Tech",
@@ -25016,12 +25335,100 @@
    "date_precision": "approx"
   },
   {
+   "id": "JvASK8qX4hg",
+   "title": "Navigating AI automation in Looker: Essential developer tools for agents",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 355,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "ITmbZFFGQuI",
+   "title": "Why AI agents need their own identity & audit trails",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 45,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "HQqb_TmrMCc",
+   "title": "Build & connect an incident investigation agent with Elastic Agent Builder and Gemini Enterprise",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 236,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "H41csOSNLWQ",
+   "title": "Agent Evaluation walkthrough",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 25,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "FRETejqa7D8",
+   "title": "How to build AI agent evals in 4 steps",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 55,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
    "id": "F8EZJAm9iO8",
    "title": "Harness Engineering Explained: Inside the Stack Behind Antigravity, Claude Code & Cursor",
    "channel": "Google Cloud Tech",
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 1858,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "EDl_3v82wLY",
+   "title": "Before you vibe code: Build an AI app implementation plan",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 677,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "CEtOL6yDmMc",
+   "title": "BigQuery Graph measures explained (Why your AI agents get metrics wrong and how measures fix it)",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 528,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "BxnIZfcDLN8",
+   "title": "Run, hunt, hack: Join the Cloud Run hackathon on product hunt",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 54,
    "views": 0,
    "published": null,
    "date_precision": "approx"
@@ -25038,12 +25445,78 @@
    "date_precision": "approx"
   },
   {
+   "id": "BQgm_qLll3A",
+   "title": "Do more with fewer tokens: Gemini Smart Routing",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 33,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "9qXaDUAGsrY",
+   "title": "Why your overnight AI agent paused after 10 seconds",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 34,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "8C4bh59FtsI",
+   "title": "AI Agent Memory Architecture: Structured SQL, Semantic Vector Search & Memory Bank",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 747,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "8AqIPjUAqeQ",
+   "title": "The No-Code Roadmap: How I Approach Prototyping",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 1487,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "7ZqwcaRX-c0",
+   "title": "Which model should I use? | The Agent Factory",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 1390,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
    "id": "6uk0XHrfMs0",
    "title": "Build cross-cloud agents with the borderless Lakehouse",
    "channel": "Google Cloud Tech",
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 4046,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "6nofrnjOCNI",
+   "title": "How to build an agentic C-Suite with Google Cloud ADK and Cloud Run",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 386,
    "views": 0,
    "published": null,
    "date_precision": "approx"
@@ -25071,6 +25544,28 @@
    "date_precision": "approx"
   },
   {
+   "id": "2C_CefSQEAQ",
+   "title": "AI harness crash course",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 568,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "1TdBFTUbUrU",
+   "title": "Plan your app’s system spec (No code)",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 1448,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
    "id": "0nYah54M3HY",
    "title": "Modernize enterprise apps on GKE: Getting started with Online Boutique",
    "channel": "Google Cloud Tech",
@@ -25082,12 +25577,34 @@
    "date_precision": "approx"
   },
   {
+   "id": "-PAavWCzhF4",
+   "title": "4 pillars of context engineering for AI agents",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 51,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
    "id": "-JxQb-kjFHk",
    "title": "Introducing BM25 on AlloyDB & Cloud SQL",
    "channel": "Google Cloud Tech",
    "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
    "credits": "",
    "duration_sec": 451,
+   "views": 0,
+   "published": null,
+   "date_precision": "approx"
+  },
+  {
+   "id": "-7GgFPFY4WI",
+   "title": "How Antigravity Evaluates a LangGraph Agent",
+   "channel": "Google Cloud Tech",
+   "channel_id": "UCJS9pqu9BzkAMNTmzNMNhvg",
+   "credits": "",
+   "duration_sec": 29,
    "views": 0,
    "published": null,
    "date_precision": "approx"
