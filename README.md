@@ -67,11 +67,12 @@ channels.json          chaînes à parcourir
 data/videos.json       base des vidéos (id, titre, chaîne, durée, vues, date, précision de la date)
 scripts/youtube.py     accès YouTube : listing d'une playlist par pages de 100, détails d'une vidéo
 scripts/update.py      mise à jour incrémentale de la base + régénération
-scripts/build.py       taggage et génération de docs/index.html
+scripts/build.py       taggage, génération de docs/index.html (balises SEO, Open Graph, JSON-LD) et de docs/sitemap.xml
 scripts/tags.py        taxonomie : familles → tags → regex sur le titre, corrections manuelles
 scripts/db.py          lecture/écriture de data/videos.json
 templates/index.html   template de la page (placeholders __DATA_JSON__, __GROUPS_JSON__, __CHANNELS_JSON__, __UPDATED__)
 docs/index.html        page générée, non versionnée — ne jamais éditer à la main
+docs/sitemap.xml       sitemap générée (URL canonique sous https://tekio.org/search-video-google-cloud-tech/), non versionnée
 .github/workflows/     génération et publication sur GitHub Pages, crawl mensuel ou manuel
 ```
 
